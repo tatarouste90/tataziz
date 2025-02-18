@@ -146,7 +146,4 @@ def handle_webhook():
         return jsonify({"status": "error"}), 500
 
 if __name__ == '__main__':
-    # Get the port from Render's environment variable (default to 5003 for local testing)
-    port = int(os.environ.get("PORT", 5003))
-    # Bind to 0.0.0.0 to make the app accessible externally
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=3005, debug=True)
